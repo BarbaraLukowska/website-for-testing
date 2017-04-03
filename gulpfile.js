@@ -7,7 +7,7 @@ var gutil = require('gulp-util');
 var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
-  return gulp.src('sass/style.scss')
+  return gulp.src('sass/main.scss')
       .pipe(plumber(function(error) {
            gutil.log(gutil.colors.red(error.message));
            this.emit('end');
