@@ -1,6 +1,11 @@
-//Modules
-@import "modules/colors";
-@import "modules/variables";
+// //Modules
+// @import "modules/colors";
+// @import "modules/variables";
+//
+// //Partials
+// @import "partials/reset";
 
-//Partials
-@import "partials/reset";
+
+body {
+  background-color: black;
+}
