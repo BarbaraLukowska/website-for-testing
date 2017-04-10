@@ -22,31 +22,49 @@ body {
   }
 }
 
-section {
+header, section {
   width: 100%;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   position: relative;
 }
 
+h1 {
+  font-size: 3rem;
+  background: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+}
+//scroll
+
+
+// header
+//TODO background1 do zmiany.
 header {
-  width: 100%;
-  background-color: #47bec9;
+  height: 60vh;
+  background-image: url("../images/background1.jpg");
+  background-repeat: no-repeat;
+  clip-path: polygon(50% 0%, 100% 0, 100% 72%, 0 100%, 0 100%, 0 0);
+  filter: hue-rotate(-10deg) contrast(0.9) brightness(1.1) saturate(1.5);
   .menu {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     a {
       text-decoration: none;
-      color: #fff;
+      color: black;
       font-size: 1.75rem;
       margin-left: 30px;
       line-height: 4rem;
       cursor: pointer;
     }
   }
+  .scroll {
+    background-color: black;
+    color: white;
+  }
 }
+
 
 @media all and (max-width: 768px) {
   .menu {
@@ -54,32 +72,42 @@ header {
   }
 }
 
-// section company
+// section: company
 main {
-  #company {
-    height: 60vh;
-    background-image: url("../images/background1.jpg");
-    background-repeat: no-repeat;
-    clip-path: polygon(50% 0%, 100% 0, 100% 72%, 0 100%, 0 100%, 0 0);
-    filter: hue-rotate(-10deg) contrast(0.9) brightness(1.1) saturate(1.5);
-  }
   .about {
     height: 50vh;
-    top: -70px;
+    top: -60px;
     position: relative;
-    h1 {
-      font-size: 3rem;
-      background: #fff;
-      display: inline-block;
-      padding: 10px 15px;
-    }
     p {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 1.20rem;
       line-height: 1.75rem;
     }
   }
 }
+
+//section: offer
+#offer {
+  height: 60vh;
+  background-image: url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  clip-path: polygon(100% 0, 100% 0, 100% 75%, 0 100%, 0 100%, 0% 25%);
+}
+.co-offer {
+  top: -70px;
+  position: relative;
+  article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    .box {
+      width: 18vw;
+      height: 25vh;
+      border: 1px solid white;
+    }
+  }
+}
+
 @media all and (max-width: 768px) {
   #company {
     background-size: cover;
