@@ -59,7 +59,9 @@ main {
   #company {
     height: 60vh;
     background-image: url("../images/background1.jpg");
+    background-repeat: no-repeat;
     clip-path: polygon(50% 0%, 100% 0, 100% 72%, 0 100%, 0 100%, 0 0);
+    filter: hue-rotate(-10deg) contrast(0.9) brightness(1.1) saturate(1.5);
   }
   .about {
     height: 50vh;
@@ -73,6 +75,17 @@ main {
     }
     p {
       margin-top: 20px;
+      font-size: 1.20rem;
+      line-height: 1.75rem;
     }
+  }
+}
+@media all and (max-width: 768px) {
+  #company {
+    background-size: cover;
+    background-position: right;
+  }
+  .about {
+    font-size: 1 rem;
   }
 }
