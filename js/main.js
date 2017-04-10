@@ -12,19 +12,15 @@ $(function(){
   }
   scrollSite();
 
-  // /*changing navigation color --- jeszcze nie działa poprawnie*/
+ /*changing navigation color */
   function handleNavChange() {
-    // var menu = $('.menu');
-    if ($(window).scrollTop() >= 90) {
-      $('.menu').addClass('scroll');
-    }
 
     $(window).scroll(function() {
-      if ($(window).scrollTop() >= 90) {
-        $('.menu').addClass('scroll');
-        $('.menu').css({'transition': 'all 0.3s'});
+      var scrTop = $(this).scrollTop();
+      if (scrTop >= 100) {
+        $('nav').addClass('scroll');
       } else {
-        $('.menu').removeClass('scroll');
+        $('nav').removeClass('scroll')
       }
     });
   }

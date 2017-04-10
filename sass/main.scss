@@ -14,7 +14,6 @@
 //end of reset
 
 body {
-  width: 100vw;
   background-color: lightgrey;
   .container {
     max-width: 60vw;
@@ -35,39 +34,42 @@ h1 {
   display: inline-block;
   padding: 10px 15px;
 }
-//scroll
 
+//scroll styling
+.scroll {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 
 // header
-//TODO background1 do zmiany.
 header {
   height: 60vh;
   background-image: url("../images/background1.jpg");
   background-repeat: no-repeat;
   clip-path: polygon(50% 0%, 100% 0, 100% 72%, 0 100%, 0 100%, 0 0);
   filter: hue-rotate(-10deg) contrast(0.9) brightness(1.1) saturate(1.5);
-  .menu {
-    list-style-type: none;
+  nav {
     display: flex;
     justify-content: flex-end;
-    a {
-      text-decoration: none;
-      color: black;
-      font-size: 1.75rem;
-      margin-left: 30px;
-      line-height: 4rem;
-      cursor: pointer;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.75rem;
+        margin: 0 30px 0 30px;
+        line-height: 4rem;
+        cursor: pointer;
+      }
     }
-  }
-  .scroll {
-    background-color: black;
-    color: white;
   }
 }
 
 
 @media all and (max-width: 768px) {
-  .menu {
+  nav {
     flex-direction: column;
   }
 }
