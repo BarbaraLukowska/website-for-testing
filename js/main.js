@@ -17,7 +17,7 @@ $(function(){
 
     $(window).scroll(function() {
       var scrTop = $(this).scrollTop();
-      if (scrTop >= 100) {
+      if (scrTop >= 80) {
         $('nav').addClass('scroll');
       } else {
         $('nav').removeClass('scroll')
