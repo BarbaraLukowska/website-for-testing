@@ -26,4 +26,19 @@ $(function(){
   }
   handleNavChange();
 
+  // Offers panels - Flex Panels (in Vanilla JS and ES6 - only for excercising);
+  const offerPanels = document.querySelectorAll('.panel');
+
+  function handleOpen() {
+      this.classList.toggle('open');
+  }
+
+  function handleActive(e) {
+      if (e.propertyName.includes('flex')) {
+          this.classList.toggle('open-active');
+      }
+  }
+  offerPanels.forEach( panel => panel.addEventListener('click', handleOpen));
+  offerPanels.forEach( panel => panel.addEventListener('transitionend', handleActive));
+
 });
